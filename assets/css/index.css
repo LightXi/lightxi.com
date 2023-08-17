@@ -343,7 +343,6 @@ body {
     user-select: none;
     color: #333;
     transition: .25s linear;
-    cursor: pointer;
     margin: 0 6px;
     text-align: center;
     transform: translateX(19px);
@@ -376,7 +375,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     width: 300px;
-    height: 270px;
+    height: 290px;
     padding: 28px 32px;
     border-radius: 6px;
     transition: .2s ease-out;
@@ -485,9 +484,9 @@ body {
     user-select: none;
     text-decoration: none;
     background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     color: #333;
-    cursor: pointer;
+    border: 1px solid #f0f0f0;
 }
 
 .feature-item-title {
@@ -495,12 +494,12 @@ body {
     font-weight: 700;
     user-select: none;
     color: #333;
-    margin-top: 2px;
     transition: .25s;
 }
 
 .feature-item:hover {
-    box-shadow: 4px 6px 8px rgba(0, 82, 217, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
 .feature-item:hover .feature-item-title {
@@ -838,13 +837,6 @@ body {
     user-select: none;
 }
 
-
-@media (max-width: 480px) {
-    .footer {
-        padding: 0 16px !important;
-    }
-}
-
 @media (max-width: 620px) {
     .landing-button {
         font-size: 16px;
@@ -890,7 +882,7 @@ body {
     }
 
     .software {
-        scale: .95;
+        scale: .9;
     }
 
     .footer-wrapper {
@@ -967,5 +959,60 @@ body {
 
     .credit {
         align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 0 16px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .footer-wrapper {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 24px !important;
+        width: 100% !important;
+    }
+
+    .footer-list {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .footer-logo {
+        width: 100%;
+        flex-direction: column;
+        gap: 24px;
+        padding: 12px 24px !important;
+        margin: 12px 0 !important;
+        margin-top: 46px !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        transform: none !important;
+    }
+
+    .footer-logo .logo {
+        margin: 0;
+    }
+
+    .credit {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 18px 0;
+    }
+
+    .footer-nav {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
