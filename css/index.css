@@ -675,7 +675,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 24px;
     margin: 32px auto;
     width: 100%;
