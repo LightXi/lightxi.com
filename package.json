@@ -1,8 +1,8 @@
 {
   "name": "lightxi.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "lightxi cloud website front-end",
+  "main": "index.html",
   "scripts": {
     "build": "npx gulp",
     "start": "npx gulp watch",
@@ -14,8 +14,8 @@
     "url": "git+https://github.com/LightXi/lightxi.com.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "LightXi Inc.",
+  "license": "AGPL-3.0",
   "bugs": {
     "url": "https://github.com/LightXi/lightxi.com/issues"
   },
