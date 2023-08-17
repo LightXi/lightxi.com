@@ -375,7 +375,7 @@ body {
     align-items: flex-start;
     gap: 12px;
     width: 300px;
-    height: 290px;
+    height: 310px;
     padding: 28px 32px;
     border-radius: 6px;
     transition: .2s ease-out;
@@ -867,6 +867,10 @@ body {
         font-size: 20px;
     }
 
+    .landing-title {
+        font-size: 32px;
+    }
+
     .landing-slider {
         display: none;
     }
@@ -935,6 +939,11 @@ body {
 
     .footer-nav {
         text-align: right;
+    }
+
+    .landing-background img {
+        /* adapter */
+        width: 240px;
     }
 }
 
@@ -1014,5 +1023,24 @@ body {
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
+    }
+
+    .landing-background img {
+        width: 200px;
+    }
+
+    .landing-wrapper {
+        margin: 0;
+        width: 100%;
+    }
+
+    .software {
+        scale: .8 !important;
+        background: none;
+        border: 1px solid #fafafa;
+    }
+
+    .software * {
+        color: #333;
     }
 }
