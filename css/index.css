@@ -268,6 +268,11 @@ body {
     background: #ecf4fa;
 }
 
+.product-container .lightxi-icon-background {
+    stroke: rgba(201, 218, 231, 0.2);
+    color: rgba(201, 218, 231, 0.2);
+}
+
 .product-image {
     width: 240px;
     height: 240px;
