@@ -345,6 +345,7 @@ body {
 }
 
 .lightxi-subtitle {
+    position: relative;
     font-size: 18px;
     font-weight: 600;
     user-select: none;
@@ -353,7 +354,6 @@ body {
     transition: .25s linear;
     margin: 0 6px;
     text-align: center;
-    transform: translateX(19px);
 }
 
 .lightxi-subtitle::after {
@@ -363,16 +363,15 @@ body {
     width: 39px;
     height: 4px;
     background: #3b97ff;
-    bottom: 0;
-    right: 0;
+    bottom: -4px;
+    right: -2px;
     border-radius: 2px;
-    transition: .25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    transform: translate(2px, 4px);
+    transition: .25s;
 }
 
 .lightxi-subtitle:hover::after {
     background: #005fff;
-
+    width: 75px;
 }
 
 .product-list {
