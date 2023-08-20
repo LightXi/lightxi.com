@@ -1,4 +1,9 @@
-* {
+/* Author LightXi
+   本程序为晞云首页的样式表程序
+   珠海市晞云云科技有限公司 版权所有 侵权必究
+   本文件最后更新日期 23.08.21 */
+   
+   * {
     outline: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
