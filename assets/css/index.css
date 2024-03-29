@@ -27,6 +27,7 @@ body {
     overflow-y: auto;
     touch-action: pan-y;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
 }
 
 .background {
@@ -38,6 +39,9 @@ body {
 }
 
 .navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 64;
     display: flex;
     flex-direction: row;
     background-color: #fff;
@@ -140,6 +144,7 @@ body {
     height: max-content;
     background: #f5f7fa;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    margin-top: 80px;
 }
 
 .landing-content {
@@ -277,7 +282,22 @@ body {
 }
 
 .product-container {
-    background: #ecf4fa;
+    background: #fff;
+    position: relative;
+}
+
+.product-container::before {
+    content: "";
+    position: absolute;
+    bottom: 36px;
+    right: 36px;
+    background-image: url("/assets/images/cloud-banner.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 160px;
+    height: 160px;
+    opacity: 0.4;
+    animation: flex 3s infinite alternate;
 }
 
 .product-container .lightxi-icon-background {
@@ -351,6 +371,9 @@ body {
 
 .lightxi-subtitle {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 18px;
     font-weight: 600;
     user-select: none;
@@ -359,6 +382,15 @@ body {
     transition: .25s linear;
     margin: 0 6px;
     text-align: center;
+}
+
+.lightxi-subtitle svg {
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 6px;
+    color: #3b97ff;
+    transition: .25s;
+    transform: translateY(1px);
 }
 
 .lightxi-subtitle::after {
@@ -377,6 +409,10 @@ body {
 .lightxi-subtitle:hover::after {
     background: #005fff;
     width: 75px;
+}
+
+.lightxi-subtitle:hover svg {
+    color: #005fff;
 }
 
 .product-list {
@@ -502,7 +538,6 @@ body {
     padding: 28px 32px;
     border-radius: 6px;
     transition: .2s ease-out;
-    user-select: none;
     text-decoration: none;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -511,11 +546,19 @@ body {
 }
 
 .feature-item-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     font-size: 24px;
     font-weight: 700;
-    user-select: none;
     color: #333;
     transition: .25s;
+}
+
+.feature-item-title svg {
+    margin-right: 6px;
+    color: #0052d9;
+    transform: translateY(1px);
 }
 
 .feature-item:hover {
@@ -528,7 +571,6 @@ body {
 }
 
 .feature-item-description {
-    user-select: none;
     color: #4b5b76;
 }
 
@@ -571,8 +613,14 @@ body {
 }
 
 .feature-container {
-    background: #fff;
+    background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+    background-image: url("/assets/images/partical-background.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: top;
+    filter: saturate(200%);
 }
 
 .creative-container {
@@ -580,6 +628,21 @@ body {
     z-index: 1;
     background-image: linear-gradient(to top, #fff 0,#f9fbff 100%);
     box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+}
+
+.creative-container::before {
+    --line: rgb(0 0 0 / 10%);
+    content: "";
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    background: linear-gradient(90deg, var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin, linear-gradient(var(--line) 1px, transparent 1px 10vmin) 0 -5vmin / 10vmin 10vmin;
+    -webkit-mask: linear-gradient(-15deg, transparent 50%, white);
+    mask: linear-gradient(-15deg, transparent 50%, white);
+    top: 0;
+    z-index: 0;
+    transform: rotate(180deg);
+    pointer-events: none;
 }
 
 .software {
@@ -726,12 +789,12 @@ body {
 }
 
 .list-item {
-    color: #9193a8 !important;
+    color: #aeb0c0 !important;
     transition: .25s;
 }
 
 .list-item:hover {
-    color: #c3c5d0 !important;
+    color: #d3d3da !important;
 }
 
 .footer-list a {
@@ -990,6 +1053,12 @@ body {
 
     .credit {
         align-items: center;
+    }
+
+    .product-item {
+        width: 90%;
+        height: max-content;
+        padding-bottom: 36px;
     }
 }
 
